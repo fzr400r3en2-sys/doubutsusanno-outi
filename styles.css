@@ -176,6 +176,24 @@ h2 {
   filter: brightness(1.03);
 }
 
+.install-guide-button {
+  min-height: 48px;
+  padding: 8px 18px 10px;
+  border: 5px solid var(--ink);
+  border-radius: 999px;
+  background: #fffdf4;
+  box-shadow: 0 6px 0 rgba(77, 57, 45, 0.2);
+  cursor: pointer;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.install-guide-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgba(77, 57, 45, 0.24);
+}
+
 .game-screen {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
@@ -390,6 +408,99 @@ h2 {
 
 .end-animals span:nth-child(5) {
   background: #d7b2eb;
+}
+
+.install-sheet {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: max(18px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+  background: rgba(77, 57, 45, 0.42);
+}
+
+.install-sheet[hidden] {
+  display: none;
+}
+
+.install-dialog {
+  width: min(100%, 560px);
+  max-height: 100%;
+  overflow: auto;
+  display: grid;
+  gap: 18px;
+  padding: clamp(18px, 5vw, 30px);
+  border: 7px solid var(--ink);
+  border-radius: 28px;
+  background: var(--paper);
+  box-shadow: 0 14px 0 rgba(77, 57, 45, 0.24);
+}
+
+.install-copy {
+  display: grid;
+  gap: 8px;
+  text-align: center;
+}
+
+.install-kicker,
+.install-lead {
+  margin: 0;
+  font-weight: 900;
+}
+
+.install-kicker {
+  color: #6b6f32;
+  font-size: clamp(1rem, 3.4vw, 1.3rem);
+}
+
+.install-dialog h2 {
+  max-width: none;
+  font-size: clamp(2rem, 8vw, 3.4rem);
+}
+
+.install-lead {
+  font-size: clamp(1.08rem, 3.8vw, 1.45rem);
+  line-height: 1.35;
+}
+
+.install-steps {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 1.5em;
+  font-size: clamp(1.05rem, 3.6vw, 1.35rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.install-actions {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.install-action-button {
+  min-height: 68px;
+  min-width: min(100%, 360px);
+  font-size: clamp(1.25rem, 5vw, 2.05rem);
+}
+
+.secondary-button {
+  min-width: min(100%, 240px);
+  min-height: 58px;
+  border: 5px solid var(--ink);
+  border-radius: 20px;
+  background: #eef8ff;
+  box-shadow: 0 6px 0 rgba(77, 57, 45, 0.18);
+  cursor: pointer;
+  font-size: clamp(1.18rem, 4vw, 1.65rem);
+  font-weight: 900;
+}
+
+.secondary-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgba(77, 57, 45, 0.24);
 }
 
 @keyframes think {

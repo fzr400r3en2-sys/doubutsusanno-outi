@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>どうぶつさんのおうち インストール</title>
+    <style>
+      :root {
+        color: #4d392d;
+        background: #fff9e8;
+        font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #bfe3ef 0%, #fff9e8 58%, #d6e8a7 100%);
+      }
+
+      main {
+        width: min(100%, 960px);
+        min-height: 100svh;
+        margin: 0 auto;
+        padding: 24px 16px 36px;
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      header {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 22px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 7vw, 4.2rem);
+        line-height: 1.12;
+      }
+
+      header p {
+        font-size: clamp(1.05rem, 3.5vw, 1.35rem);
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .qr-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+      }
+
+      .qr-card {
+        display: grid;
+        gap: 14px;
+        justify-items: center;
+        padding: 18px;
+        border: 6px solid #4d392d;
+        border-radius: 24px;
+        background: #fffdf4;
+        box-shadow: 0 10px 0 rgba(77, 57, 45, 0.18);
+        text-align: center;
+      }
+
+      h2 {
+        font-size: clamp(1.7rem, 5vw, 2.5rem);
+      }
+
+      .qr-card img {
+        width: min(100%, 280px);
+        aspect-ratio: 1;
+        border: 5px solid #4d392d;
+        border-radius: 18px;
+        background: #ffffff;
+      }
+
+      .qr-card p {
+        font-size: clamp(1rem, 3.2vw, 1.25rem);
+        font-weight: 800;
+        line-height: 1.4;
+      }
+
+      a {
+        color: #2d6542;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>どうぶつさんのおうち</h1>
+        <p>端末でQRコードを読み込むとゲームが開きます。ホーム画面への追加は、スタート画面のボタンから確認できます。</p>
+      </header>
+
+      <section class="qr-grid" aria-label="インストール用QRコード">
+        <article class="qr-card">
+          <h2>iPhone</h2>
+          <img src="./qr-iphone.svg" alt="iPhone用QRコード">
+          <p>Safariで開いて、共有ボタンからホーム画面に追加します。</p>
+          <a href="../../?install=iphone">iPhone用リンクを開く</a>
+        </article>
+
+        <article class="qr-card">
+          <h2>Android</h2>
+          <img src="./qr-android.svg" alt="Android用QRコード">
+          <p>Chromeで開いて、インストールまたはホーム画面に追加します。</p>
+          <a href="../../?install=android">Android用リンクを開く</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

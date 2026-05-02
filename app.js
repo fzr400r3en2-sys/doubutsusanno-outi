@@ -79,11 +79,51 @@ const animalStage = document.querySelector("#animalStage");
 const animalImage = document.querySelector("#animalImage");
 const animalName = document.querySelector("#animalName");
 const homesGrid = document.querySelector("#homesGrid");
+const installGuideButton = document.querySelector("#installGuideButton");
+const installSheet = document.querySelector("#installSheet");
+const installLead = document.querySelector("#installLead");
+const installSteps = document.querySelector("#installSteps");
+const pwaInstallButton = document.querySelector("#pwaInstallButton");
+const closeInstallButton = document.querySelector("#closeInstallButton");
 
 let animalOrder = [];
 let currentIndex = 0;
 let settled = false;
 let nextTimer = 0;
+let deferredInstallPrompt = null;
+
+const installGuides = {
+  iphone: {
+    lead: "Safariで開いて、ホーム画面にアイコンを置けます。",
+    steps: [
+      "Safariの共有ボタンをタップします。",
+      "ホーム画面に追加を選びます。",
+      "追加をタップします。"
+    ]
+  },
+  android: {
+    lead: "Chromeで開いて、ホーム画面にアイコンを置けます。",
+    steps: [
+      "画面の案内または右上のメニューを開きます。",
+      "アプリをインストール、またはホーム画面に追加を選びます。",
+      "追加をタップします。"
+    ]
+  },
+  other: {
+    lead: "スマートフォンやタブレットのブラウザからホーム画面に追加できます。",
+    steps: [
+      "ブラウザのメニューを開きます。",
+      "ホーム画面に追加、またはインストールを選びます。",
+      "追加をタップします。"
+    ]
+  },
+  standalone: {
+    lead: "ホーム画面から起動中です。",
+    steps: [
+      "このまま遊べます。"
+    ]
+  }
+};
 
 function shuffleItems(items) {
   const copied = [...items];
@@ -232,8 +272,119 @@ function goNext() {
   renderRound();
 }
 
+function isStandaloneMode() {
+  return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+}
+
+function detectDeviceKind() {
+  const userAgent = window.navigator.userAgent || "";
+  const platform = window.navigator.platform || "";
+  const isIPadOS = platform === "MacIntel" && window.navigator.maxTouchPoints > 1;
+
+  if (/iPhone|iPad|iPod/.test(userAgent) || isIPadOS) {
+    return "iphone";
+  }
+
+  if (/Android/.test(userAgent)) {
+    return "android";
+  }
+
+  return "other";
+}
+
+function requestedInstallKind() {
+  const params = new URLSearchParams(window.location.search);
+  const target = params.get("install");
+  if (target === "iphone" || target === "android") {
+    return target;
+  }
+  return "";
+}
+
+function renderInstallGuide(kind) {
+  const guideKind = isStandaloneMode() ? "standalone" : kind;
+  const guide = installGuides[guideKind] || installGuides.other;
+
+  installLead.textContent = guide.lead;
+  installSteps.replaceChildren();
+
+  for (const step of guide.steps) {
+    const item = document.createElement("li");
+    item.textContent = step;
+    installSteps.append(item);
+  }
+
+  pwaInstallButton.hidden = !deferredInstallPrompt || guideKind === "iphone" || guideKind === "standalone";
+}
+
+function openInstallGuide(kind = detectDeviceKind()) {
+  renderInstallGuide(kind);
+  installSheet.hidden = false;
+  closeInstallButton.focus({ preventScroll: true });
+}
+
+function closeInstallGuide() {
+  installSheet.hidden = true;
+  installGuideButton.focus({ preventScroll: true });
+}
+
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) {
+    return;
+  }
+
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  });
+}
+
 startButton.addEventListener("click", startGame);
 againButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", goNext);
+installGuideButton.addEventListener("click", () => openInstallGuide());
+closeInstallButton.addEventListener("click", closeInstallGuide);
+pwaInstallButton.addEventListener("click", async () => {
+  if (!deferredInstallPrompt) {
+    return;
+  }
+
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  renderInstallGuide(detectDeviceKind());
+});
+
+installSheet.addEventListener("click", (event) => {
+  if (event.target === installSheet) {
+    closeInstallGuide();
+  }
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !installSheet.hidden) {
+    closeInstallGuide();
+  }
+});
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  if (!installSheet.hidden) {
+    renderInstallGuide(detectDeviceKind());
+  }
+});
+
+window.addEventListener("appinstalled", () => {
+  deferredInstallPrompt = null;
+  if (!installSheet.hidden) {
+    renderInstallGuide("standalone");
+  }
+});
 
 showScreen(startScreen);
+registerServiceWorker();
+
+const installKindFromUrl = requestedInstallKind();
+if (installKindFromUrl) {
+  window.setTimeout(() => openInstallGuide(installKindFromUrl), 450);
+}

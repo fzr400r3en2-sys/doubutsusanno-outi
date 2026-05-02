@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#f7e7ba">
+    <meta name="description" content="どうぶつに合うおうちをタップして遊ぶ幼児向けゲーム">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="どうぶつさんのおうち">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>どうぶつさんのおうち</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
     <link rel="stylesheet" href="./styles.css">
-    <!-- PWA化する次工程で manifest.webmanifest と sw.js の登録を追加する想定です。 -->
   </head>
   <body>
     <main class="app-shell" aria-live="polite">
@@ -21,6 +27,7 @@
           <p class="eyebrow">やさしく えらぶ あそび</p>
           <h1>どうぶつさんのおうち</h1>
           <button class="primary-button" id="startButton" type="button">はじめる</button>
+          <button class="install-guide-button" id="installGuideButton" type="button">ホームに追加</button>
         </div>
       </section>
 
@@ -55,6 +62,21 @@
         </div>
         <h2>みんな おうちに かえったね</h2>
         <button class="primary-button" id="againButton" type="button">もういっかい</button>
+      </section>
+
+      <section class="install-sheet" id="installSheet" role="dialog" aria-modal="true" aria-labelledby="installTitle" hidden>
+        <div class="install-dialog">
+          <div class="install-copy">
+            <p class="install-kicker">つぎから すぐあそぶ</p>
+            <h2 id="installTitle">ホームに追加</h2>
+            <p class="install-lead" id="installLead"></p>
+          </div>
+          <ol class="install-steps" id="installSteps"></ol>
+          <div class="install-actions">
+            <button class="primary-button install-action-button" id="pwaInstallButton" type="button" hidden>この端末に追加</button>
+            <button class="secondary-button" id="closeInstallButton" type="button">とじる</button>
+          </div>
+        </div>
       </section>
     </main>
 

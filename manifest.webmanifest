@@ -1,0 +1,27 @@
+{
+  "name": "どうぶつさんのおうち",
+  "short_name": "どうぶつおうち",
+  "description": "どうぶつに合うおうちをタップして遊ぶ幼児向けゲーム",
+  "lang": "ja",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f7e7ba",
+  "theme_color": "#f7e7ba",
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
