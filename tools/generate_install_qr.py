@@ -1,11 +1,13 @@
 import argparse
 import html
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from resolve_public_url import resolve_public_url
 
 
 ECL_MEDIUM = 1
+APP_VERSION = "4"
 FORMAT_BITS = (1, 0, 3, 2)
 ECC_CODEWORDS_PER_BLOCK = (
     (),
@@ -359,6 +361,13 @@ def write_qr(path, url, title):
     path.write_text(svg_for_matrix(matrix, title, url), encoding="utf-8")
 
 
+def with_query(url, **params):
+    parts = urlsplit(url)
+    query = dict(parse_qsl(parts.query, keep_blank_values=True))
+    query.update(params)
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
+
+
 def main():
     parser = argparse.ArgumentParser(description="Generate install QR codes for doubutsusanno-outi.")
     parser.add_argument("--base-url", help="Public URL. Defaults to DOUBUTSU_HOME_PUBLIC_URL or GitHub Pages.")
@@ -371,8 +380,8 @@ def main():
 
     base_url = resolve_public_url(args.base_url)
     targets = {
-        "iphone": base_url,
-        "android": base_url,
+        "iphone": with_query(base_url, install="iphone", v=APP_VERSION),
+        "android": with_query(base_url, install="android", v=APP_VERSION),
     }
 
     write_qr(output_dir / "qr-iphone.svg", targets["iphone"], "iPhone QR code for doubutsusanno-outi")

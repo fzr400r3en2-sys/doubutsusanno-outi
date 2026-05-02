@@ -764,6 +764,33 @@ h2 {
   }
 }
 
+@media (max-width: 430px) {
+  .homes-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    max-width: 400px;
+  }
+
+  .home-card {
+    min-height: clamp(78px, 13svh, 96px);
+    padding: 5px;
+    border-width: 5px;
+    border-radius: 18px;
+    grid-template-rows: minmax(44px, 1fr) auto;
+  }
+
+  .home-card img {
+    width: min(100%, 68px);
+    height: min(8svh, 58px);
+    min-height: 42px;
+  }
+
+  .home-card span {
+    margin-top: 2px;
+    font-size: clamp(0.72rem, 3vw, 0.95rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
