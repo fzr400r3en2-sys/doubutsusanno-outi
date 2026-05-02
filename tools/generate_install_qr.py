@@ -7,7 +7,7 @@ from resolve_public_url import resolve_public_url
 
 
 ECL_MEDIUM = 1
-APP_VERSION = "6"
+APP_VERSION = "7"
 FORMAT_BITS = (1, 0, 3, 2)
 ECC_CODEWORDS_PER_BLOCK = (
     (),

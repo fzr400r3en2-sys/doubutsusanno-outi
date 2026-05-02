@@ -114,6 +114,7 @@ const animalStage = document.querySelector("#animalStage");
 const animalImage = document.querySelector("#animalImage");
 const animalName = document.querySelector("#animalName");
 const homesGrid = document.querySelector("#homesGrid");
+const playField = document.querySelector(".play-field");
 const installGuideButton = document.querySelector("#installGuideButton");
 const installSheet = document.querySelector("#installSheet");
 const installLead = document.querySelector("#installLead");
@@ -195,6 +196,7 @@ function renderRound() {
   const animal = currentAnimal();
   settled = false;
   nextArea.hidden = true;
+  clearCelebrations();
 
   animalStage.classList.remove("is-thinking", "is-going-home");
   animalStage.style.setProperty("--go-x", "0px");
@@ -266,8 +268,12 @@ function clearHomeStates() {
 function sendAnimalHome(button) {
   settled = true;
   button.classList.add("is-happy");
+  message.classList.remove("is-correct");
+  void message.offsetWidth;
   message.textContent = "ぴったり！おうちだね";
   message.classList.add("is-correct");
+
+  spawnCelebration(button);
 
   const move = calculateMove(button);
   animalStage.style.setProperty("--go-x", `${move.x}px`);
@@ -283,6 +289,32 @@ function sendAnimalHome(button) {
     nextArea.hidden = false;
     nextButton.focus({ preventScroll: true });
   }, 620);
+}
+
+function spawnCelebration(button) {
+  if (!playField) {
+    return;
+  }
+  clearCelebrations();
+  const buttonRect = button.getBoundingClientRect();
+  const fieldRect = playField.getBoundingClientRect();
+  const cele = document.createElement("div");
+  cele.className = "home-celebrate";
+  cele.setAttribute("aria-hidden", "true");
+  cele.style.left = `${buttonRect.left - fieldRect.left}px`;
+  cele.style.top = `${buttonRect.top - fieldRect.top}px`;
+  cele.style.width = `${buttonRect.width}px`;
+  cele.style.height = `${buttonRect.height}px`;
+  playField.append(cele);
+}
+
+function clearCelebrations() {
+  if (!playField) {
+    return;
+  }
+  for (const node of playField.querySelectorAll(".home-celebrate")) {
+    node.remove();
+  }
 }
 
 function calculateMove(button) {

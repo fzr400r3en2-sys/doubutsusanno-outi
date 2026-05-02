@@ -265,17 +265,53 @@ h2 {
 }
 
 .message.is-correct {
-  background: #f0f8df;
-  box-shadow: 0 0 0 6px rgba(159, 202, 101, 0.34);
-  transform: scale(1.02);
+  background: #fffbe0;
+  border-color: #2d6542;
+  color: #2d6542;
+  box-shadow: 0 0 0 9px rgba(159, 202, 101, 0.55);
+  animation: messagePop 620ms cubic-bezier(0.34, 1.6, 0.5, 1) 1 forwards;
+}
+
+@keyframes messagePop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.16) rotate(-1.2deg); }
+  100% { transform: scale(1.08); }
 }
 
 .play-field {
+  position: relative;
   min-height: 0;
   display: grid;
   grid-template-rows: minmax(190px, 1fr) auto;
   gap: clamp(10px, 2.4vw, 18px);
   align-items: center;
+}
+
+.home-celebrate {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+}
+
+.home-celebrate::before {
+  content: "";
+  width: 96%;
+  aspect-ratio: 1;
+  border: clamp(9px, 2.6vw, 15px) solid #2d6542;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 247, 190, 0) 56%, rgba(159, 202, 101, 0.42) 100%);
+  box-shadow: 0 0 0 clamp(4px, 1.2vw, 8px) rgba(255, 215, 106, 0.7);
+  animation: maruPop 1500ms cubic-bezier(0.34, 1.55, 0.6, 1) 1 forwards;
+}
+
+@keyframes maruPop {
+  0% { transform: scale(0.05); opacity: 0; }
+  35% { transform: scale(1.22); opacity: 1; }
+  55% { transform: scale(0.94); }
+  75% { transform: scale(1.04); }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .animal-stage {
@@ -398,28 +434,13 @@ h2 {
 }
 
 .home-card.is-happy {
-  background: #fff7be;
+  background: #fffbe0;
   border-color: #2d6542;
-  box-shadow: 0 8px 0 rgba(77, 57, 45, 0.22), 0 0 0 7px rgba(159, 202, 101, 0.42);
-  animation: happyHome 680ms ease-in-out 1;
-}
-
-.home-card.is-happy::after {
-  content: "○";
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 34px;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 4px solid var(--ink);
-  border-radius: 50%;
-  background: #fffdf4;
-  color: #2d6542;
-  font-size: 1.6rem;
-  font-weight: 900;
-  line-height: 1;
+  box-shadow:
+    0 8px 0 rgba(77, 57, 45, 0.22),
+    0 0 0 9px rgba(159, 202, 101, 0.62),
+    0 0 0 18px rgba(255, 215, 106, 0.42);
+  animation: happyHome 720ms cubic-bezier(0.34, 1.55, 0.5, 1) 1;
 }
 
 .next-area {
@@ -589,13 +610,10 @@ h2 {
 }
 
 @keyframes happyHome {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.05) rotate(-2deg);
-  }
+  0% { transform: scale(1); }
+  35% { transform: scale(1.1) rotate(-3deg); }
+  70% { transform: scale(0.97); }
+  100% { transform: scale(1); }
 }
 
 @media (min-width: 720px) {
@@ -775,14 +793,6 @@ h2 {
 
   .home-card span {
     font-size: clamp(0.98rem, 4vw, 1.25rem);
-  }
-
-  .home-card.is-happy::after {
-    top: 5px;
-    right: 5px;
-    width: 28px;
-    border-width: 3px;
-    font-size: 1.25rem;
   }
 
   .next-area {
