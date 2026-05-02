@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img">
+<defs>
+    <style>
+      .line{stroke:#4d392d;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#4d392d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .none{fill:none}
+    </style>
+  </defs>
+
+  <path class="line" fill="#7ecbe8" d="M73 129c0-38 28-66 64-66 38 0 66 28 66 66 0 43-30 77-66 77s-64-34-64-77z"/>
+  <path class="line" fill="#5aa5d6" d="M91 139c13-7 34-4 50 14-10 18-33 26-51 17-10-5-9-25 1-31z"/>
+  <path class="line" fill="#ffe07b" d="m190 103 41 18-41 21z"/>
+  <circle fill="#4d392d" cx="153" cy="101" r="7"/>
+  <path class="thin none" d="M125 205v22"/>
+  <path class="thin none" d="M152 205v22"/>
+  <path class="thin none" d="M110 229h25"/>
+  <path class="thin none" d="M139 229h25"/>
+  <path class="line" fill="#9ddf9a" d="M68 72c14-30 50-38 78-22-22 1-37 14-45 35z"/>
+  <path class="line" fill="#d9f4ff" d="M103 81c8-12 25-18 41-13-9 6-15 14-18 25z"/>
+</svg>

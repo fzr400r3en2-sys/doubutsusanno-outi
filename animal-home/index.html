@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7e7ba">
+    <title>どうぶつさんのおうち</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- PWA化する次工程で manifest.webmanifest と sw.js の登録を追加する想定です。 -->
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <section class="screen start-screen is-active" id="startScreen">
+        <div class="start-illustration" aria-hidden="true">
+          <span class="sun"></span>
+          <span class="hill hill-one"></span>
+          <span class="hill hill-two"></span>
+          <span class="path"></span>
+        </div>
+        <div class="start-content">
+          <p class="eyebrow">やさしく えらぶ あそび</p>
+          <h1>どうぶつさんのおうち</h1>
+          <button class="primary-button" id="startButton" type="button">はじめる</button>
+        </div>
+      </section>
+
+      <section class="screen game-screen" id="gameScreen" hidden>
+        <header class="game-header">
+          <p class="round-label" id="roundLabel">どうぶつさん</p>
+          <p class="message" id="message">どのおうちかな？</p>
+        </header>
+
+        <section class="play-field" aria-label="どうぶつとおうち">
+          <div class="animal-stage" id="animalStage">
+            <div class="animal-shadow" aria-hidden="true"></div>
+            <img class="animal-image" id="animalImage" src="" alt="">
+            <p class="animal-name" id="animalName"></p>
+          </div>
+
+          <div class="homes-grid" id="homesGrid" aria-label="おうちをえらぶ"></div>
+        </section>
+
+        <div class="next-area" id="nextArea" hidden>
+          <button class="primary-button next-button" id="nextButton" type="button">つぎのどうぶつ</button>
+        </div>
+      </section>
+
+      <section class="screen end-screen" id="endScreen" hidden>
+        <div class="end-animals" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <h2>みんな おうちに かえったね</h2>
+        <button class="primary-button" id="againButton" type="button">もういっかい</button>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

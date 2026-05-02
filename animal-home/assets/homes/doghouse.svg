@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img">
+<defs>
+    <style>
+      .line{stroke:#4d392d;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#4d392d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .none{fill:none}
+    </style>
+  </defs>
+
+  <path class="line" fill="#f2bf72" d="M56 121h144v96H56z"/>
+  <path class="line" fill="#df6f59" d="M38 124 128 47l90 77z"/>
+  <path class="line" fill="#fff3d4" d="M101 217v-52c0-18 12-31 27-31s27 13 27 31v52z"/>
+  <path class="thin none" d="M83 144h28"/>
+  <path class="thin none" d="M164 144h18"/>
+  <circle fill="#4d392d" cx="128" cy="174" r="6"/>
+  <path class="line" fill="#f8e6b3" d="M83 79h90v34H83z"/>
+</svg>

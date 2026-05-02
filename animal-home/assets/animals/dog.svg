@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img">
+<defs>
+    <style>
+      .line{stroke:#4d392d;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#4d392d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .none{fill:none}
+    </style>
+  </defs>
+
+  <path class="line" fill="#f2bf72" d="M70 144c8-33 39-54 78-45 33 7 52 33 48 65-4 37-36 54-76 50-38-4-59-31-50-70z"/>
+  <path class="line" fill="#f7cd8b" d="M58 92c-1-30 22-52 53-50 30 2 50 25 47 55-3 27-25 47-53 47-27 0-46-22-47-52z"/>
+  <path class="line" fill="#9a6848" d="M57 73c-20 8-31 28-23 51 19 0 34-13 39-34z"/>
+  <path class="line" fill="#9a6848" d="M144 72c22 5 37 23 34 47-18 4-36-7-44-27z"/>
+  <path class="line" fill="#ffe4b0" d="M84 101c9-14 32-15 44-2 5 6 5 18-1 24-10 10-31 10-41 0-6-6-7-15-2-22z"/>
+  <circle fill="#4d392d" cx="89" cy="87" r="6"/>
+  <circle fill="#4d392d" cx="127" cy="87" r="6"/>
+  <path class="thin none" d="M105 112c5 7 13 7 19 0"/>
+  <path class="line none" d="M190 134c24-16 38-5 36 15"/>
+  <path class="line none" d="M94 207v25"/>
+  <path class="line none" d="M151 211v23"/>
+  <path class="line" fill="#ef746f" d="M101 145c16 7 36 7 53-1v16c-17 8-36 8-53 0z"/>
+  <circle fill="#4d392d" cx="113" cy="110" r="7"/>
+</svg>

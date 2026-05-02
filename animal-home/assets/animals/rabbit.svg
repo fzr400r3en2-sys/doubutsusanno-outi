@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img">
+<defs>
+    <style>
+      .line{stroke:#4d392d;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#4d392d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .none{fill:none}
+    </style>
+  </defs>
+
+  <path class="line" fill="#f6f4e8" d="M76 147c5-36 34-61 72-57 39 4 63 33 57 70-6 39-39 61-79 56-38-5-56-31-50-69z"/>
+  <path class="line" fill="#fdfaf1" d="M67 91c0-31 25-54 59-54s59 23 59 54-25 55-59 55-59-24-59-55z"/>
+  <path class="line" fill="#fdfaf1" d="M83 52C74 15 88-7 107 13c13 14 14 42 6 66z"/>
+  <path class="line" fill="#fdfaf1" d="M145 77c-8-30-4-58 12-70 21-15 31 9 19 46-6 18-16 29-31 24z"/>
+  <path class="thin" fill="#ffd3d2" d="M94 57c-5-21 0-34 8-28 7 6 8 24 4 40z"/>
+  <path class="thin" fill="#ffd3d2" d="M155 60c-2-21 3-33 11-27 6 6 5 23-3 39z"/>
+  <circle fill="#4d392d" cx="105" cy="96" r="6"/>
+  <circle fill="#4d392d" cx="146" cy="96" r="6"/>
+  <path class="thin" fill="#f19a8d" d="m125 112 10 0-5 8z"/>
+  <path class="thin none" d="M119 127c6 7 15 7 22 0"/>
+  <circle class="line" fill="#fff" cx="196" cy="164" r="21"/>
+  <path class="line none" d="M104 215v20"/>
+  <path class="line none" d="M158 215v20"/>
+</svg>
