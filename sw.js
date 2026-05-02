@@ -1,11 +1,11 @@
 "use strict";
 
-const CACHE_NAME = "doubutsusanno-outi-pwa-v2";
+const CACHE_NAME = "doubutsusanno-outi-pwa-v3";
 const APP_ASSETS = [
   "./",
   "./index.html",
   "./app.js",
-  "./styles.css",
+  "./styles.css?v=3",
   "./manifest.webmanifest",
   "./assets/animals/bird.svg",
   "./assets/animals/cat.svg",
