@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img">
+<defs>
+    <style>
+      .line{stroke:#4d392d;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#4d392d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .none{fill:none}
+    </style>
+  </defs>
+
+  <path class="line" fill="#a87147" d="M70 144c0-44 36-78 78-72 42 6 68 41 62 84-6 41-42 65-84 58-37-6-56-32-56-70z"/>
+  <circle class="line" fill="#a87147" cx="76" cy="78" r="22"/>
+  <circle class="line" fill="#a87147" cx="184" cy="78" r="22"/>
+  <circle class="line" fill="#c89070" cx="76" cy="78" r="10"/>
+  <circle class="line" fill="#c89070" cx="184" cy="78" r="10"/>
+  <ellipse class="line" fill="#e8c69c" cx="128" cy="158" rx="40" ry="32"/>
+  <circle fill="#4d392d" cx="102" cy="118" r="7"/>
+  <circle fill="#4d392d" cx="156" cy="118" r="7"/>
+  <ellipse class="line" fill="#4d392d" cx="128" cy="142" rx="11" ry="8"/>
+  <path class="thin none" d="M128 152v8"/>
+  <path class="thin none" d="M115 170c8 6 18 6 26 0"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img">
+<defs>
+    <style>
+      .line{stroke:#4d392d;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#4d392d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .none{fill:none}
+    </style>
+  </defs>
+
+  <path class="line" fill="#85c95f" d="M11 168c54-21 184-22 234 0v66H11z"/>
+  <ellipse class="line" fill="#3a2a22" cx="128" cy="184" rx="50" ry="36"/>
+  <ellipse fill="#1a120c" cx="128" cy="190" rx="36" ry="24"/>
+  <circle class="line" fill="#a8a5a0" cx="58" cy="184" r="12"/>
+  <circle class="line" fill="#a8a5a0" cx="200" cy="188" r="14"/>
+  <path class="line" fill="#67ad56" d="M40 162l10-26 10 26z"/>
+  <path class="line" fill="#67ad56" d="M204 162l10-26 10 26z"/>
+</svg>

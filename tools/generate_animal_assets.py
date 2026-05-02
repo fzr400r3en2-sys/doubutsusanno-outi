@@ -178,6 +178,144 @@ ASSETS = {
   <path class="thin none" d="M103 207c8-9 20-14 34-14s26 5 34 14"/>
 """
     ),
+    ANIMALS / "panda.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#fff8e8" d="M68 144c0-44 36-80 80-74 42 6 70 41 64 84-6 41-44 65-86 58-37-6-58-30-58-68z"/>
+  <circle class="line" fill="#3a2a22" cx="78" cy="80" r="24"/>
+  <circle class="line" fill="#3a2a22" cx="178" cy="80" r="24"/>
+  <ellipse class="line" fill="#3a2a22" cx="98" cy="124" rx="16" ry="22"/>
+  <ellipse class="line" fill="#3a2a22" cx="158" cy="124" rx="16" ry="22"/>
+  <circle fill="#fff" cx="100" cy="120" r="6"/>
+  <circle fill="#fff" cx="160" cy="120" r="6"/>
+  <ellipse class="line" fill="#3a2a22" cx="128" cy="150" rx="12" ry="8"/>
+  <path class="thin none" d="M128 160v6"/>
+  <path class="thin none" d="M118 174c5 5 15 5 20 0"/>
+"""
+    ),
+    ANIMALS / "pig.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#f7b9c1" d="M62 138c0-44 38-72 78-68 44 4 72 38 70 80-2 38-38 60-78 60-40 0-72-30-70-72z"/>
+  <path class="line" fill="#f7b9c1" d="M58 96c5-22 22-32 38-22 8 18-12 34-30 32z"/>
+  <path class="line" fill="#f7b9c1" d="M198 96c-5-22-22-32-38-22-8 18 12 34 30 32z"/>
+  <ellipse class="line" fill="#f29db0" cx="128" cy="148" rx="38" ry="26"/>
+  <circle fill="#4d392d" cx="116" cy="148" r="5"/>
+  <circle fill="#4d392d" cx="140" cy="148" r="5"/>
+  <circle fill="#4d392d" cx="100" cy="116" r="6"/>
+  <circle fill="#4d392d" cx="156" cy="116" r="6"/>
+  <path class="thin none" d="M105 178c8 8 18 8 26 0"/>
+"""
+    ),
+    ANIMALS / "frog.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#82c264" d="M52 156c0-50 36-86 76-86s76 36 76 86c0 38-30 70-76 70s-76-32-76-70z"/>
+  <path class="line" fill="#82c264" d="M70 78c0-22 14-38 30-38s28 16 28 38-12 36-28 36-30-14-30-36z"/>
+  <path class="line" fill="#82c264" d="M128 78c0-22 14-38 30-38s28 16 28 38-12 36-28 36-30-14-30-36z"/>
+  <circle class="line" fill="#fff" cx="100" cy="74" r="14"/>
+  <circle class="line" fill="#fff" cx="158" cy="74" r="14"/>
+  <circle fill="#4d392d" cx="100" cy="78" r="6"/>
+  <circle fill="#4d392d" cx="158" cy="78" r="6"/>
+  <path class="thin none" d="M88 158c20 12 38 12 60 0"/>
+  <path class="line" fill="#a3d77f" d="M75 196c-20 5-32 22-22 36 14-2 24-13 28-32z"/>
+  <path class="line" fill="#a3d77f" d="M183 196c20 5 32 22 22 36-14-2-24-13-28-32z"/>
+"""
+    ),
+    ANIMALS / "bear.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#a87147" d="M70 144c0-44 36-78 78-72 42 6 68 41 62 84-6 41-42 65-84 58-37-6-56-32-56-70z"/>
+  <circle class="line" fill="#a87147" cx="76" cy="78" r="22"/>
+  <circle class="line" fill="#a87147" cx="184" cy="78" r="22"/>
+  <circle class="line" fill="#c89070" cx="76" cy="78" r="10"/>
+  <circle class="line" fill="#c89070" cx="184" cy="78" r="10"/>
+  <ellipse class="line" fill="#e8c69c" cx="128" cy="158" rx="40" ry="32"/>
+  <circle fill="#4d392d" cx="102" cy="118" r="7"/>
+  <circle fill="#4d392d" cx="156" cy="118" r="7"/>
+  <ellipse class="line" fill="#4d392d" cx="128" cy="142" rx="11" ry="8"/>
+  <path class="thin none" d="M128 152v8"/>
+  <path class="thin none" d="M115 170c8 6 18 6 26 0"/>
+"""
+    ),
+    ANIMALS / "mouse.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#c9c4ba" d="M62 156c0-50 30-90 66-90s66 40 66 90c0 38-30 68-66 68s-66-30-66-68z"/>
+  <circle class="line" fill="#c9c4ba" cx="80" cy="78" r="24"/>
+  <circle class="line" fill="#c9c4ba" cx="176" cy="78" r="24"/>
+  <circle class="line" fill="#f7c8d0" cx="80" cy="78" r="12"/>
+  <circle class="line" fill="#f7c8d0" cx="176" cy="78" r="12"/>
+  <circle fill="#4d392d" cx="100" cy="126" r="6"/>
+  <circle fill="#4d392d" cx="156" cy="126" r="6"/>
+  <path class="line" fill="#f29db0" d="M118 156c4 8 16 8 20 0l-10 10z"/>
+  <path class="thin none" d="M114 178c8 5 20 5 28 0"/>
+  <path class="thin none" d="M64 162c-14 4-26 12-30 24"/>
+  <path class="thin none" d="M192 162c14 4 26 12 30 24"/>
+"""
+    ),
+    HOMES / "bamboo.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#92c660" d="M70 28h32v204H70z"/>
+  <path class="line" fill="#a4d56e" d="M156 44h32v188h-32z"/>
+  <path class="thin none" d="M70 88h32"/>
+  <path class="thin none" d="M70 142h32"/>
+  <path class="thin none" d="M70 196h32"/>
+  <path class="thin none" d="M156 102h32"/>
+  <path class="thin none" d="M156 156h32"/>
+  <path class="thin none" d="M156 210h32"/>
+  <path class="line" fill="#7ab851" d="M102 60c20-12 38-2 50 14-20 4-38 2-50-14z"/>
+  <path class="line" fill="#7ab851" d="M188 76c14-15 30-12 40-2-14 12-30 14-40 2z"/>
+  <path class="line" fill="#7ab851" d="M22 116c14-12 28-10 38 0-12 12-28 12-38 0z"/>
+"""
+    ),
+    HOMES / "pigpen.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#9a6848" d="M22 188h212v44H22z"/>
+  <path class="line" fill="#caa168" d="M52 78h16v140H52z"/>
+  <path class="line" fill="#caa168" d="M120 78h16v140h-16z"/>
+  <path class="line" fill="#caa168" d="M188 78h16v140h-16z"/>
+  <path class="line" fill="#caa168" d="M40 108h176v16H40z"/>
+  <path class="line" fill="#caa168" d="M40 156h176v16H40z"/>
+  <ellipse class="line" fill="#7d5c3a" cx="98" cy="208" rx="32" ry="9"/>
+  <ellipse class="line" fill="#7d5c3a" cx="174" cy="208" rx="22" ry="7"/>
+"""
+    ),
+    HOMES / "lilypad.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#b4e5f4" d="M16 156c20-10 40-10 60 0s40 10 60 0 40-10 60 0 40 10 44 0v76H16z"/>
+  <path class="line" fill="#7ec064" d="M52 142c0-26 36-46 76-46s76 20 76 46-36 46-76 46-76-20-76-46z"/>
+  <path class="line none" d="M128 96v46"/>
+  <path class="line" fill="#ffd0e1" d="M128 78c-12-12 0-32 12-32s22 20 12 32c14 0 22 14 14 24-8 8-22 4-26-10-2 14-18 18-26 10-8-10 0-24 14-24z"/>
+  <circle class="line" fill="#ffe97a" cx="128" cy="68" r="9"/>
+"""
+    ),
+    HOMES / "cave.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#8c8a82" d="M22 224c0-94 48-164 106-164s106 70 106 164z"/>
+  <path class="line" fill="#3a3530" d="M76 224c0-50 24-86 52-86s52 36 52 86z"/>
+  <ellipse fill="#1a120c" cx="128" cy="200" rx="36" ry="28"/>
+  <circle class="line" fill="#a8a5a0" cx="50" cy="208" r="14"/>
+  <circle class="line" fill="#a8a5a0" cx="206" cy="208" r="14"/>
+  <path class="line" fill="#fff" d="M82 84c12-14 32-22 46-22s34 8 46 22c-30-4-62-4-92 0z"/>
+"""
+    ),
+    HOMES / "hole.svg": svg(
+        STYLE
+        + """
+  <path class="line" fill="#85c95f" d="M11 168c54-21 184-22 234 0v66H11z"/>
+  <ellipse class="line" fill="#3a2a22" cx="128" cy="184" rx="50" ry="36"/>
+  <ellipse fill="#1a120c" cx="128" cy="190" rx="36" ry="24"/>
+  <circle class="line" fill="#a8a5a0" cx="58" cy="184" r="12"/>
+  <circle class="line" fill="#a8a5a0" cx="200" cy="188" r="14"/>
+  <path class="line" fill="#67ad56" d="M40 162l10-26 10 26z"/>
+  <path class="line" fill="#67ad56" d="M204 162l10-26 10 26z"/>
+"""
+    ),
 }
 
 
@@ -188,11 +326,21 @@ def build_preview():
         ("どうぶつ", "animals/bird.svg", "とり"),
         ("どうぶつ", "animals/fish.svg", "さかな"),
         ("どうぶつ", "animals/rabbit.svg", "うさぎ"),
+        ("どうぶつ", "animals/panda.svg", "ぱんだ"),
+        ("どうぶつ", "animals/pig.svg", "ぶた"),
+        ("どうぶつ", "animals/frog.svg", "かえる"),
+        ("どうぶつ", "animals/bear.svg", "くま"),
+        ("どうぶつ", "animals/mouse.svg", "ねずみ"),
         ("おうち", "homes/doghouse.svg", "いぬごや"),
         ("おうち", "homes/cushion.svg", "クッション"),
         ("おうち", "homes/tree.svg", "き"),
         ("おうち", "homes/aquarium.svg", "すいそう"),
         ("おうち", "homes/grass.svg", "くさむら"),
+        ("おうち", "homes/bamboo.svg", "たけ"),
+        ("おうち", "homes/pigpen.svg", "ぶたごや"),
+        ("おうち", "homes/lilypad.svg", "はす"),
+        ("おうち", "homes/cave.svg", "ほらあな"),
+        ("おうち", "homes/hole.svg", "あな"),
     ]
     cards = "\n".join(
         f'      <figure><img src="{src}" alt="{label}"><figcaption>{group}: {label}</figcaption></figure>'

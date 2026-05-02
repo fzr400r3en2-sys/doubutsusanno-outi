@@ -1,28 +1,38 @@
 "use strict";
 
-const CACHE_NAME = "doubutsusanno-outi-pwa-v5";
+const CACHE_NAME = "doubutsusanno-outi-pwa-v6";
 const APP_ASSETS = [
   "./",
   "./index.html",
   "./app.js",
-  "./styles.css?v=5",
+  "./styles.css?v=6",
   "./manifest.webmanifest",
+  "./assets/animals/bear.svg",
   "./assets/animals/bird.svg",
   "./assets/animals/cat.svg",
   "./assets/animals/dog.svg",
   "./assets/animals/fish.svg",
+  "./assets/animals/frog.svg",
+  "./assets/animals/mouse.svg",
+  "./assets/animals/panda.svg",
+  "./assets/animals/pig.svg",
   "./assets/animals/rabbit.svg",
   "./assets/homes/aquarium.svg",
+  "./assets/homes/bamboo.svg",
+  "./assets/homes/cave.svg",
   "./assets/homes/cushion.svg",
   "./assets/homes/doghouse.svg",
   "./assets/homes/grass.svg",
+  "./assets/homes/hole.svg",
+  "./assets/homes/lilypad.svg",
+  "./assets/homes/pigpen.svg",
   "./assets/homes/tree.svg",
   "./assets/icons/apple-touch-icon.png",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/install/install.html",
-  "./assets/install/qr-iphone.svg?v=5",
-  "./assets/install/qr-android.svg?v=5"
+  "./assets/install/qr-iphone.svg?v=6",
+  "./assets/install/qr-android.svg?v=6"
 ];
 
 self.addEventListener("install", (event) => {

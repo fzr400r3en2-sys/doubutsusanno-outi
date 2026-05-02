@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img">
+<defs>
+    <style>
+      .line{stroke:#4d392d;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#4d392d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .none{fill:none}
+    </style>
+  </defs>
+
+  <path class="line" fill="#f7b9c1" d="M62 138c0-44 38-72 78-68 44 4 72 38 70 80-2 38-38 60-78 60-40 0-72-30-70-72z"/>
+  <path class="line" fill="#f7b9c1" d="M58 96c5-22 22-32 38-22 8 18-12 34-30 32z"/>
+  <path class="line" fill="#f7b9c1" d="M198 96c-5-22-22-32-38-22-8 18 12 34 30 32z"/>
+  <ellipse class="line" fill="#f29db0" cx="128" cy="148" rx="38" ry="26"/>
+  <circle fill="#4d392d" cx="116" cy="148" r="5"/>
+  <circle fill="#4d392d" cx="140" cy="148" r="5"/>
+  <circle fill="#4d392d" cx="100" cy="116" r="6"/>
+  <circle fill="#4d392d" cx="156" cy="116" r="6"/>
+  <path class="thin none" d="M105 178c8 8 18 8 26 0"/>
+</svg>

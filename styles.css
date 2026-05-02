@@ -192,6 +192,36 @@ h2 {
   line-height: 1.05;
 }
 
+.mute-toggle {
+  position: fixed;
+  z-index: 12;
+  top: max(10px, env(safe-area-inset-top));
+  right: max(10px, env(safe-area-inset-right));
+  min-width: 84px;
+  min-height: 44px;
+  padding: 4px 12px 6px;
+  border: 4px solid var(--ink);
+  border-radius: 999px;
+  background: #fffdf4;
+  box-shadow: 0 4px 0 rgba(77, 57, 45, 0.22);
+  cursor: pointer;
+  font-size: clamp(0.85rem, 2.6vw, 1.1rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+}
+
+.mute-toggle[data-muted="1"] {
+  background: #f1ece0;
+  color: #8a6f5a;
+  box-shadow: 0 2px 0 rgba(77, 57, 45, 0.18);
+}
+
+.mute-toggle:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(77, 57, 45, 0.22);
+}
+
 .install-guide-button:active {
   transform: translateY(4px);
   box-shadow: 0 2px 0 rgba(77, 57, 45, 0.24);
