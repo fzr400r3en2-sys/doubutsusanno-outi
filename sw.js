@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "doubutsusanno-outi-pwa-v1";
+const CACHE_NAME = "doubutsusanno-outi-pwa-v2";
 const APP_ASSETS = [
   "./",
   "./index.html",

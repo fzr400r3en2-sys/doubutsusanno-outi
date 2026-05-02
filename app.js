@@ -163,6 +163,7 @@ function renderRound() {
   animalStage.style.setProperty("--go-y", "0px");
 
   roundLabel.textContent = `${currentIndex + 1}ひきめの どうぶつさん`;
+  message.classList.remove("is-correct");
   message.textContent = animal.prompt;
   animalImage.src = animal.image;
   animalImage.alt = animal.name;
@@ -205,6 +206,7 @@ function chooseHome(home, button) {
   }
 
   message.textContent = "こっちかな？";
+  message.classList.remove("is-correct");
   animalStage.classList.remove("is-thinking");
   void animalStage.offsetWidth;
   animalStage.classList.add("is-thinking");
@@ -224,7 +226,8 @@ function clearHomeStates() {
 function sendAnimalHome(button) {
   settled = true;
   button.classList.add("is-happy");
-  message.textContent = "おうちに かえったね";
+  message.textContent = "ぴったり！おうちだね";
+  message.classList.add("is-correct");
 
   const move = calculateMove(button);
   animalStage.style.setProperty("--go-x", `${move.x}px`);
