@@ -1,11 +1,11 @@
 "use strict";
 
-const CACHE_NAME = "doubutsusanno-outi-pwa-v4";
+const CACHE_NAME = "doubutsusanno-outi-pwa-v5";
 const APP_ASSETS = [
   "./",
   "./index.html",
   "./app.js",
-  "./styles.css?v=4",
+  "./styles.css?v=5",
   "./manifest.webmanifest",
   "./assets/animals/bird.svg",
   "./assets/animals/cat.svg",
@@ -21,8 +21,8 @@ const APP_ASSETS = [
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/install/install.html",
-  "./assets/install/qr-iphone.svg?v=4",
-  "./assets/install/qr-android.svg?v=4"
+  "./assets/install/qr-iphone.svg?v=5",
+  "./assets/install/qr-android.svg?v=5"
 ];
 
 self.addEventListener("install", (event) => {
